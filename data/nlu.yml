@@ -16,6 +16,20 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - xin chào
+    - chào bạn
+    - chào
+    - hey
+    - mình có vài câu hỏi
+    - có ai giúp mình không
+    - bạn ơi
+    - anh ơi
+    - chị ơi
+    - cháu ơi
+    - hello 
+    - chào 
+    - hi 
+    - có ai ở đây không?
 
 - intent: goodbye
   examples: |
@@ -29,6 +43,14 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - tạm biệt
+    - hẹn gặp lại
+    - chúc một ngày tốt lành
+    - gặp lại sau
+    - chào tạm biệt
+    - chào tạm biệt em
+    - tạm biệt em
+    - tạm biệt em nhé
 
 - intent: affirm
   examples: |
@@ -38,6 +60,9 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - được á
+    - chuẩn
+    - rồi
 
 - intent: deny
   examples: |
@@ -48,6 +73,9 @@ nlu:
     - don't like that
     - no way
     - not really
+    - không được
+    - tôi không đồng ý
+    - đừng
 
 - intent: mood_great
   examples: |
@@ -65,6 +93,10 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - quá tốt
+    - được đó
+    - ok
+    - tôi hài lòng
 
 - intent: mood_unhappy
   examples: |
@@ -82,6 +114,11 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - tệ quá
+    - không phải rồi
+    - không chính xác
+    - tôi không hài lòng với ý kiến này
+    - tôi không thích sản phẩm này
 
 - intent: bot_challenge
   examples: |
@@ -89,32 +126,23 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - bạn là bot phải không?
+    - bạn có biết nói không?
+    - bạn có phải là người không?
 
-- intent: greet
+- intent: product_question
   examples:
-    - xin chào
-    - chào bạn
-    - hello
-    - hi
-    - hey
-    - mình có vài câu hỏi
-    - có ai giúp mình không
-    - bạn ơi
-    - anh ơi
-    - chị ơi
-    - cháu ơi
-    - hello 
-    - chào 
-    - hi 
-    - có ai ở đây không?
+  - sản phẩm gaming
+  - sản phẩm văn phòng
+  - laptop gaming
+  - laptop văn phòng
 
-- intent: bye
+- intent: best_product_question
   examples:
-  - tạm biệt
-  - chào tạm biệt
-  - chào tạm biệt em
-  - tạm biệt em
-  - tạm biệt em nhé
+  - sản phẩm đang bán chạy nhất
+  - sản phẩm hot nhất hiện nay
+  - laptop hot nhất hiện nay là gì vậy
+  - laptop đang bán chạy nhất
 
 - intent: thank
   examples:
