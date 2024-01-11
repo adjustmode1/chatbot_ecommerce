@@ -1,0 +1,37 @@
+version: "3.1"
+
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- product_question
+- best_product_question
+- thank
+- ask_func_list
+- ask_name
+
+responses:
+  utter_greet:
+  - text: "Xin chào bạn!"
+  utter_cheer_up:
+  - text: "Tôi có cái này hay nè:"
+  utter_did_that_help:
+  - text: "Tôi có thể giúp gì cho bạn?"
+  utter_happy:
+  - text: "Tuyệt vời!"
+  utter_goodbye:
+  - text: "Tạm biệt"
+  utter_iamabot:
+  - text: "Tôi là chatbot."
+  utter_best_product_question:
+  - text: "http://127.0.0.1:3500/product/1"
+  utter_ask_name:
+  - text: "Tôi là bot"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
