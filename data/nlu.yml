@@ -131,21 +131,21 @@ nlu:
     - bạn có phải là người không?
 
 - intent: product_question
-  examples:
-  - sản phẩm gaming
-  - sản phẩm văn phòng
-  - laptop gaming
-  - laptop văn phòng
+  examples: |
+    - sản phẩm gaming
+    - sản phẩm văn phòng
+    - laptop gaming
+    - laptop văn phòng
 
 - intent: best_product_question
-  examples:
-  - sản phẩm đang bán chạy nhất
-  - sản phẩm hot nhất hiện nay
-  - laptop hot nhất hiện nay là gì vậy
-  - laptop đang bán chạy nhất
+  examples: |
+    - sản phẩm đang bán chạy nhất
+    - sản phẩm hot nhất hiện nay
+    - laptop hot nhất hiện nay là gì vậy
+    - laptop đang bán chạy nhất
 
 - intent: thank
-  examples:
+  examples: |
     - chuẩn
     - hay
     - siêu
@@ -159,7 +159,7 @@ nlu:
     - cảm ơn
 
 - intent: ask_func_list
-  examples:
+  examples: |
     - bạn có thể làm được những gì
     - bạn giúp được gì nào
     - chức năng của bạn là gì
@@ -198,7 +198,7 @@ nlu:
     - có biết gì 
 
 - intent: ask_name
-  examples:
+  examples: |
     - bạn tên gì
     - tên gì
     - chị tên gì

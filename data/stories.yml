@@ -30,42 +30,42 @@ stories:
   - action: utter_goodbye
 
 - story: Chào - tên - hỏi chức năng - chào
- steps: 
+  steps: 
   - intent: greet
   - action: utter_greet
   - intent: ask_name
   - action: utter_ask_name
   - intent: ask_func_list
   - action: utter_func_list
-  - intent: bye
-  - action: utter_bye
+  - intent: goodbye
+  - action: utter_goodbye
   
 - story: Chào  - hỏi chức năng - chào
- steps: 
+  steps: 
   - intent: greet
   - action: utter_greet
   - intent: ask_func_list
   - action: utter_func_list
-  - intent: bye
-  - action: utter_bye
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Chào  - hỏi tên - chào
- steps: 
+  steps: 
   - intent: greet
   - action: utter_greet
   - intent: ask_name
   - action: utter_ask_name
-  - action: bye
-  - intent: utter_bye
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: Hỏi tên - hỏi chức năng
- steps:
+  steps:
   - intent: ask_name
   - action: utter_ask_name
   - intent: ask_func_list
   - action: utter_func_list
 
 - story: Cảm ơn
- steps:
+  steps:
   - intent: thank
   - action: utter_thank

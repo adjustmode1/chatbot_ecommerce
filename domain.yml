@@ -8,6 +8,9 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - thank
+  - ask_name
+  - ask_func_list
 
 responses:
   utter_greet:
@@ -25,9 +28,19 @@ responses:
 
   utter_goodbye:
   - text: "Bye"
-
+  utter_bye:
+  - text: "Bye"
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+  utter_ask_name:
+  - text: '' 
+  utter_func_list:
+  - text: ''
+  utter_thank:
+  - text: 'thanks'
+
+actions:
+- bye
 
 session_config:
   session_expiration_time: 60
