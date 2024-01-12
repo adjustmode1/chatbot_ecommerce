@@ -41,4 +41,4 @@ class ActionAskKnowledgeBaseSanPham(Action):
         dispatcher.utter_message("Nội dung bạn muốn bot trả lời test ----------------")
         # if not check:
             # dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
-        return
+        return []
