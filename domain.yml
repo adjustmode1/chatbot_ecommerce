@@ -13,6 +13,10 @@ intents:
   - ask_func_list
   - best_product_question
 
+actions:
+  - bye
+  - action_best_product
+
 responses:
   utter_greet:
   - text: "Chào bạn!"
@@ -40,10 +44,6 @@ responses:
   - text: 'tôi có thể tìm cho bạn sản phẩm hot nhất hiện tại!'
   utter_thank:
   - text: 'Cảm ơn!'
-
-actions:
-  - bye
-  - action_best_product
 
 
 session_config:

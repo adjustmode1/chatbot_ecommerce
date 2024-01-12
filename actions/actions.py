@@ -3,27 +3,24 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
-from rasa_core_sdk import Action
-# from rasa_core_sdk.events import SlotSet
-# from rasa_core_sdk.events import UserUtteranceReverted
-# from rasa_core_sdk.events import AllSlotsReset
-# from rasa_core_sdk.events import Restarted
+# from rasa_core_sdk import Action
+from rasa_sdk.interfaces import Action
 
 # import requests
 # import json
 # from bs4 import BeautifulSoup
 # from pyvi import ViTokenizer, ViPosTagger
-# import mysql.connector
+import mysql.connector
 
 
-# mydb = mysql.connector.connect(
-#   host="localhost",
-#   user="root",
-#   password="admin",
-#   database="laptop_store"
-# )
+mydb = mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="laptop_store"
+)
 
-# cursor = mydb.cursor()
+cursor = mydb.cursor()
 
 class ActionAskKnowledgeBaseSanPham(Action):
 
@@ -31,14 +28,22 @@ class ActionAskKnowledgeBaseSanPham(Action):
         return "action_best_product"
 
     def run(self, dispatcher,tracker,domain):
-        # text = tracker.latest_message['text']
-        # text_input = text.lower()
-        # mysql_select_query = ''' SELECT * from product'''
-        # cursor.execute(mysql_select_query)
-        # record = cursor.fetchall()
+        mysql_select_query = ''' SELECT * from san_pham'''
+        cursor.execute(mysql_select_query)
+        record = cursor.fetchone()
         # for result in record:
             # san_pham = result[0].lower()
-        dispatcher.utter_message("Nội dung bạn muốn bot trả lời test ----------------")
-        # if not check:
-            # dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
+        if record:
+            dispatcher.utter_message("http://127.0.0.1:3000/products/" + record[0])
+        else:
+            dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
+        return []
+    
+
+class ActionGreet(Action):
+    def name(self):
+        return 'action_greet'
+
+    def run(self, dispatcher, tracker, domain):
+        dispatcher.utter_message(template="utter_greet")
         return []
