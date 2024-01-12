@@ -33,7 +33,7 @@ def name_cap(text):
 
 class ActionAskKnowledgeBaseSanPham(Action):
 
-    def name(self) -> Text:
+    def name(self):
         return "action_best_product"
 
     def run(self, dispatcher,tracker,domain):
@@ -47,6 +47,7 @@ class ActionAskKnowledgeBaseSanPham(Action):
         dispatcher.utter_message("Nội dung bạn muốn bot trả lời test ----------------")
         # if not check:
             # dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
+        return
 
 class action_save_cust_info(Action):
     def name(self):
