@@ -42,8 +42,8 @@ responses:
   - text: 'Cảm ơn!'
 
 actions:
-- bye
-- action_best_product
+  - bye
+  - action_best_product
 
 
 session_config:
