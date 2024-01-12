@@ -20,7 +20,6 @@ mydb = mysql.connector.connect(
   database="laptop_store"
 )
 
-cursor = mydb.cursor()
 
 class ActionAskKnowledgeBaseSanPham(Action):
 
@@ -29,12 +28,13 @@ class ActionAskKnowledgeBaseSanPham(Action):
 
     def run(self, dispatcher,tracker,domain):
         mysql_select_query = ''' SELECT * from san_pham'''
+        cursor = mydb.cursor()
+
         cursor.execute(mysql_select_query)
         record = cursor.fetchone()
-        # for result in record:
-            # san_pham = result[0].lower()
+
         if record:
-            dispatcher.utter_message("http://127.0.0.1:3000/products/" + record[0])
+            dispatcher.utter_message("http://127.0.0.1:3000/products/" + str(record[0]))
         else:
             dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
         return []
