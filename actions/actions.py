@@ -1,27 +1,40 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+from __future__ import unicode_literals
+
+from rasa_core_sdk import Action
+
+import requests
+import json
+from bs4 import BeautifulSoup
+from pyvi import ViTokenizer, ViPosTagger
+# import mysql.connector
 
 
-# This is a simple example for a custom action which utters "Hello World!"
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="root",
+#   password="admin",
+#   database="laptop_store"
+# )
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+# cursor = mydb.cursor()
+
+class ActionAskKnowledgeBaseSanPham(Action):
+
+    def name(self):
+        return "action_best_product"
+
+    def run(self, dispatcher,tracker,domain):
+        # text = tracker.latest_message['text']
+        # text_input = text.lower()
+        # mysql_select_query = ''' SELECT * from product'''
+        # cursor.execute(mysql_select_query)
+        # record = cursor.fetchall()
+        # for result in record:
+            # san_pham = result[0].lower()
+        dispatcher.utter_message("Nội dung bạn muốn bot trả lời test ----------------")
+        # if not check:
+            # dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
+        return
