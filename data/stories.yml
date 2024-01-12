@@ -65,6 +65,13 @@ stories:
   - intent: ask_func_list
   - action: utter_func_list
 
+- story: Hỏi tên - hỏi product
+  steps:
+  - intent: ask_name
+  - action: utter_ask_name
+  - intent: best_product_question
+  - action: action_best_product
+
 - story: Cảm ơn
   steps:
   - intent: thank

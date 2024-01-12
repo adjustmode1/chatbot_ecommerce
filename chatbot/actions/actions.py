@@ -13,12 +13,40 @@ import requests
 import json
 from bs4 import BeautifulSoup
 from pyvi import ViTokenizer, ViPosTagger
+import mysql.connector
+
+
+# mydb = mysql.connector.connect(
+#   host="localhost",
+#   user="root",
+#   password="admin",
+#   database="laptop_store"
+# )
+
+# cursor = mydb.cursor()
 
 def name_cap(text):
     tarr = text.split()
     for idx in range(len(tarr)):
         tarr[idx] = tarr[idx].capitalize()
     return ' '.join(tarr)
+
+class ActionAskKnowledgeBaseSanPham(Action):
+
+    def name(self) -> Text:
+        return "action_best_product"
+
+    def run(self, dispatcher,tracker,domain):
+        # text = tracker.latest_message['text']
+        # text_input = text.lower()
+        # mysql_select_query = ''' SELECT * from product'''
+        # cursor.execute(mysql_select_query)
+        # record = cursor.fetchall()
+        # for result in record:
+            # san_pham = result[0].lower()
+        dispatcher.utter_message("Nội dung bạn muốn bot trả lời test ----------------")
+        # if not check:
+            # dispatcher.utter_message("Dạ cửa hàng em chưa có sản phẩm như anh chi cần ạ")
 
 class action_save_cust_info(Action):
     def name(self):

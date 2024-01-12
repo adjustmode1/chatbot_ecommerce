@@ -11,36 +11,40 @@ intents:
   - thank
   - ask_name
   - ask_func_list
+  - best_product_question
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: "Chào bạn!"
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
     image: "https://i.imgur.com/nGF1K8f.jpg"
-
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: "Tôi có thể giúp gì cho bạn!"
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: "oh! tuyệt quá"
   utter_goodbye:
-  - text: "Bye"
+  - text: "Tạm biệt!"
   utter_bye:
-  - text: "Bye"
+  - text: "Tạm biệt!"
+  - text: "Kính chào tạm biệt và mong sớm gặp lại quý khách!"
+  - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Tôi là chatbot của laptopstore"
+  - text: "Em là chatbot của website laptop này ạ! Quý khách cần trợ giúp gì ạ?"
+  - text: "Dạ thưa. Em là Trợ lý ảo website laptop"
   utter_ask_name:
-  - text: '' 
+  - text: "Em là chatbot của website laptop này ạ! Quý khách cần trợ giúp gì ạ?"
+  - text: "Dạ thưa. Em là Trợ lý ảo website laptop"
   utter_func_list:
-  - text: ''
+  - text: 'tôi có thể tìm cho bạn sản phẩm hot nhất hiện tại!'
   utter_thank:
-  - text: 'thanks'
+  - text: 'Cảm ơn!'
 
 actions:
 - bye
+- action_best_product
+
 
 session_config:
   session_expiration_time: 60
